@@ -6,7 +6,8 @@ FROM $IMAGE:$UNITY_VERSION-base-$IMAGE_VERSION
 
 RUN apt-get update && apt-get install -y apt-transport-https \
   ca-certificates \
-  gnupg
+  gnupg \
+  && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
 # Add mono to sources
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
