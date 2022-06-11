@@ -44,7 +44,7 @@ jobs:
         cache-from: type=local,src=/tmp/.buildx-cache
         cache-to: type=local,dest=/tmp/.buildx-cache
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/unity-ci-dotnet:${{ env.UNITY_VERSION}}-${{ env.IMAGE_VERSION }}
+        tags: ${{ secrets.DOCKER_USERNAME }}/unity-ci-dotnet:${{ env.UNITY_VERSION}}-codequality-${{ env.IMAGE_VERSION }}
 
     - name: Check output digest
       run: echo ${{ steps.build-push.outputs.digest }}
