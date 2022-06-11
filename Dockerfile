@@ -23,3 +23,7 @@ RUN apt-get update \
   && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
 RUN export FrameworkPathOverride=/opt/unity/Editor/Data/MonoBleedingEdge/
+
+# Add generate solution script & make it executable
+COPY generate_solution.sh /bin/
+RUN chmod +x /bin/generate_solution.sh
