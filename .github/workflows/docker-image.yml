@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      UNITY_VERSION: "2021.3.4f1"
+      UNITY_VERSION: "2022.1.12f1"
       IMAGE_VERSION: "1"
 
     steps:
